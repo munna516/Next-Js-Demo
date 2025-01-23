@@ -17,16 +17,18 @@ const Navbar = async () => {
       >
         Home
       </Link>
-      <Link
-        href={`${
-          user
-            ? "/profile"
-            : "https://nextjsdemo001.kinde.com/auth/cx/_:nav&m:login&psid:019494429023176f0e7da992f01a5f88"
-        }`}
-        className=" text-xl font-bold bg-white rounded-lg px-4 py-2 text-black "
-      >
-        Profile
-      </Link>
+      {user ? (
+        <Link
+          href="/profile"
+          className=" text-xl font-bold bg-white rounded-lg px-4 py-2 text-black "
+        >
+          Profile
+        </Link>
+      ) : (
+        <LoginLink className="text-xl font-bold bg-white rounded-lg px-4 py-2 text-black">
+          Profile
+        </LoginLink>
+      )}
     </>
   );
 
