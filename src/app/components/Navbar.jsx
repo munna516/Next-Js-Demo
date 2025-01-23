@@ -25,7 +25,10 @@ const Navbar = async () => {
           Profile
         </Link>
       ) : (
-        <LoginLink className="text-xl font-bold bg-white rounded-lg px-4 py-2 text-black">
+        <LoginLink
+          postLoginRedirectURL="/profile"
+          className="text-xl font-bold bg-white rounded-lg px-4 py-2 text-black"
+        >
           Profile
         </LoginLink>
       )}
